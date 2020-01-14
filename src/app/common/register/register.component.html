@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="justify-content-around">
+        <div class="border col-lg-8 m-3">
+            <p class="h2">{{formTitle}}</p>
+        </div>
+        <div class="border col-lg-8 m-3">
+            <input type="text" class="form-control col-lg-6 m-3" [(ngModel)]='userCred.name' placeholder="User Name"/>
+            <input type="password" class="form-control col-lg-6 m-3" [(ngModel)]='userCred.password' placeholder="Password"/>
+            <input type="password" class="form-control col-lg-6 m-3" *ngIf="registerBtn !== 'Register'" [(ngModel)]='repassword.newpassword' placeholder="New Password"/>
+            <input type="password" class="form-control col-lg-6 m-3" [(ngModel)]='repassword.rePassword' placeholder="Verify Password"/>
+            <input type="text" class="form-control col-lg-6 m-3" [(ngModel)]='userCred.email' placeholder="Email Address"/>
+            <div class="clearfix">
+                <button class="col-lg-3 m-3" *ngIf="registerBtn !== 'Register'" (click)="updateUserDetails()">{{registerBtn}}</button>
+                <button class="col-lg-3 m-3" *ngIf="registerBtn === 'Register'" (click)="registertoApp()">{{registerBtn}}</button>
+                <button class="col-lg-3 m-3 float-right" *ngIf="registerBtn !== 'Register'" (click)="cancelEdit()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

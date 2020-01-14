@@ -1,0 +1,21 @@
+.header{
+    font-size: larger;
+    font-weight: bold;
+    color: whitesmoke;
+    min-height: 2em;
+    flex-flow: row;
+}
+
+.header__h2 {
+    margin: 0;
+}
+
+.header__end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.head1{
+    flex-flow: row;
+    display: flex;
+}

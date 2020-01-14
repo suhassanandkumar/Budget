@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="justify-content-around">
+        <div class="border col-lg-8 m-3">
+            <p class="h2">Sing In</p>
+        </div>
+        <div class="border col-lg-8 m-3">
+            <input type="text" class="form-control col-lg-6 m-3" [(ngModel)]='userCred.name' placeholder="User Name" />
+            <input type="password" class="form-control col-lg-6 m-3" [(ngModel)]='userCred.password' placeholder="Password" />
+            <div class="form-check col-lg-6 m-3">
+                <input type="checkbox" class="form-check-input" [checked]="remember" (change)="remember = !remember">
+                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+            </div>
+            <div class="btn-danger">{{loginResult}}</div>
+            <div class="clearfix">
+                <button class="col-lg-3 m-3" (click)="logintoApp()">Login</button>
+                <a class="col-lg-3 m-3 float-right" [routerLink]="'/register'">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
