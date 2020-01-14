@@ -1,0 +1,12 @@
+<mat-toolbar class="header" style="display: flex">
+    <h3 class="head1">Budget</h3>
+    <div *ngIf="this.userService.loggedUser?.id">
+        <span mat-button>{{this.userService.loggedUser?.name}}</span>
+        <button mat-button [matMenuTriggerFor]="beforeMenu">Account</button>
+        <mat-menu #beforeMenu="matMenu" xPosition="after">
+            <button mat-menu-item [routerLink]="'/edit'">Edit Profile</button>
+            <button mat-menu-item (click)="deleteUser()">Delete USer</button>
+        </mat-menu>
+        <button type="menu" (click)="logout()">Logout</button>
+    </div>
+</mat-toolbar>
