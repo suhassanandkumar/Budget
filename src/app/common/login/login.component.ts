@@ -44,18 +44,6 @@ export class LoginComponent implements OnInit {
       });
       loginResult ? this.loginResult ="Login Successfull" : this.loginResult = "Login Un-Successfull";
     }
-    // if (this.userCred.name && this.userList) {
-
-    //   this.userList.filter(val => {
-    //     if (val.name.toLocaleLowerCase() === user.name.toLocaleLowerCase() && val.password === user.password) {
-    //       localStorage.setItem('token', user.name);
-    //       this.remember ? sessionStorage.setItem('token', user.name) : null;
-    //       login = true;
-    //       this.router.navigateByUrl("home");
-    //     }
-    //   })
-    //   login ? console.log("LogIN Successfull") : console.log("LogIN Un-Successfull");
-    // }
   }
 
 }

@@ -1,8 +1,9 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
+import { MatDialogModule ,MatFormFieldModule, MatIconModule, MatInputModule, MatMenuModule, MatProgressSpinnerModule, MatToolbarModule } from '@angular/material';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDialogModule ,MatFormFieldModule, MatInputModule, MatMenuModule, MatProgressSpinnerModule, MatToolbarModule } from '@angular/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,19 +14,19 @@ import { FooterComponent } from './common/footer/footer.component';
 import { LoginComponent } from './common/login/login.component';
 import { HomeComponent } from './common/home/home.component';
 import { RegisterComponent } from './common/register/register.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogModal } from './common/modal/modal.component';
+import { TabsSectorModule } from './common/home/tabs-sector/tabs-sector.module'
 
 @NgModule({
   declarations: [
     AppComponent,
     ChangedomDirective,
+    DialogModal,
+    FooterComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent,
     LoginComponent,
-    DialogModal,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     AppRoutingModule,
@@ -34,13 +35,15 @@ import { DialogModal } from './common/modal/modal.component';
     HttpClientModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatMenuModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
     NgbModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TabsSectorModule
   ],
   entryComponents:[DialogModal],
   exports: [MatFormFieldModule],

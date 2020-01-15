@@ -1,0 +1,13 @@
+<p>tab-first works!</p>
+<div class="container">
+    <div class="justify-content-around">
+        <div class="border col-lg-8 m-3">
+            <p class="h3">Spent</p>
+        </div>
+        <div class="border col-lg-8 m-3">
+            <input type="text" class="form-control col-lg-6 m-3" [(ngModel)]='transDetails.description' placeholder="Add Description" />
+            <input type="number" class="form-control col-lg-6 m-3" [(ngModel)]='transDetails.amount' placeholder="$" />
+            <button class="btn btn-danger" (click)="saveTrans()">Save</button>
+        </div>
+    </div>
+</div>
