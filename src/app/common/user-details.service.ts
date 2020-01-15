@@ -1,6 +1,6 @@
-import { Injectable, Type } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Router, UrlHandlingStrategy } from '@angular/router';
+import { Router } from '@angular/router';
 import "rxjs/add/observable/of";
 import{ catchError } from 'rxjs/operators'
 import { v4 as uuid } from 'uuid';

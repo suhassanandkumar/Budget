@@ -1,7 +1,9 @@
 <mat-toolbar class="header" style="display: flex">
     <h3 class="head1">Budget</h3>
+    <span class="toolbar_spacer"></span>
     <div *ngIf="this.userService.loggedUser?.id">
-        <span mat-button>{{this.userService.loggedUser?.name}}</span>
+        <span mat-button><mat-icon inline=true aria-label="Example home icon">account_circle</mat-icon>
+        {{this.userService.loggedUser?.name}}</span>
         <button mat-button [matMenuTriggerFor]="beforeMenu">Account</button>
         <mat-menu #beforeMenu="matMenu" xPosition="after">
             <button mat-menu-item [routerLink]="'/edit'">Edit Profile</button>

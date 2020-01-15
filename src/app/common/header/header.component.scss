@@ -1,9 +1,4 @@
 .header{
-    font-size: larger;
-    font-weight: bold;
-    color: whitesmoke;
-    min-height: 2em;
-    flex-flow: row;
 }
 
 .header__h2 {
@@ -16,6 +11,9 @@
 }
 
 .head1{
-    flex-flow: row;
-    display: flex;
+    font-size: xx-large;
+}
+
+.toolbar_spacer{
+    flex: 1 auto;
 }
