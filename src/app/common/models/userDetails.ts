@@ -10,9 +10,11 @@ export interface DialogData {
     name: string;
 }
 
-export interface transactDetails {
-    userId: string;
-    id: string;
+export interface transactDetailsBasic {
     description: string;
     amount: number;
+}
+export interface transactDetails extends transactDetailsBasic {
+    userId: string;
+    id: string;
 }
