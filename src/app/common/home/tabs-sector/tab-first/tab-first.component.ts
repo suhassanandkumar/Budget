@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDetailsService } from 'src/app/common/user-details.service';
-import { TransactServiceService } from '../transact-service.service';
+import { TransactService } from '../transact-service.service';
 import { transactDetails } from 'src/app/common/models/userDetails';
 
 @Component({
@@ -12,7 +12,7 @@ export class TabFirstComponent implements OnInit {
 
   private transDetails: transactDetails = { userId: "", id: "", description: "", amount: null };
   public transData: transactDetails[];
-  constructor(private transactservice: TransactServiceService, private userService: UserDetailsService) { }
+  constructor(private transactservice: TransactService, private userService: UserDetailsService) { }
 
   ngOnInit() {
     this.transDetails.userId = this.userService.loggedUser.id;
@@ -26,6 +26,7 @@ export class TabFirstComponent implements OnInit {
         if (key === this.transDetails.userId) {
           this.transactservice.addTransaction(this.transDetails).subscribe(res =>{
             if (res['status'] === 200) {
+              this.transactservice.getAll();  
               console.log("updated response : ", res['error'].text);
             }
           });
